@@ -4,7 +4,7 @@ Addon to use aggregations from Windmill
 # Usage
 
 ```
-require connectholland\windmill-mongo-aggregations-addon
+composer require connectholland/windmill-mongo-aggregations-addon
 ```
 
 Define a mongo.aggregation service through the dependency injection container:
