@@ -16,7 +16,7 @@ class AggregatedMongoPeerTest extends MongoPeerTest
      */
     public function setUp()
     {
-        WMCommonRegistry::get('serviceregistry')->set('mongo.aggregation', new MongoAggregation);
+        WMCommonRegistry::get('serviceregistry')->set('mongo.aggregations', new MongoAggregation());
         parent::setUp();
     }
 }
