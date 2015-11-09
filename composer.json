@@ -1,0 +1,29 @@
+{
+    "name": "connectholland/windmill-mongo-aggregations-addon",
+    "description": "Addon to use aggregations from Windmill",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Ron Rademaker",
+            "email": "ron@connectholland.nl"
+        }
+    ],
+    "require": {
+        "connectholland/mongo-aggregations": "@RC"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7",
+        "connectholland/windmill": "dev-aggregations-filter-count as 6.6.0"
+    },
+    "repositories": {
+        "ron": {
+            "type": "vcs",
+            "url": "https://github.com/RonRademaker/Windmill.git"
+        },
+        "connectholland": {
+            "type": "composer",
+            "url": "https://composer.packages.connectholland.nl/"
+        }
+    }
+}
