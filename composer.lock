@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d26c4f07c9c447fa553f23389826f8a8",
+    "hash": "8b30812991e56e979ef3319635248fc9",
     "content-hash": "7329f93c51c711f7bc31d54373c074bf",
     "packages": [
         {
@@ -1059,12 +1059,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:RonRademaker/Windmill.git",
-                "reference": "21d5bf288eccc5e5dfc85d8afd6f0e4b21ac4bb6"
+                "reference": "604895fb8791d4604b7a086e7f9a4c902815bf61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RonRademaker/Windmill/zipball/21d5bf288eccc5e5dfc85d8afd6f0e4b21ac4bb6",
-                "reference": "21d5bf288eccc5e5dfc85d8afd6f0e4b21ac4bb6",
+                "url": "https://api.github.com/repos/RonRademaker/Windmill/zipball/604895fb8791d4604b7a086e7f9a4c902815bf61",
+                "reference": "604895fb8791d4604b7a086e7f9a4c902815bf61",
                 "shasum": ""
             },
             "require": {
@@ -1087,13 +1087,12 @@
                 "zf1/zend-search-lucene": "^1.12"
             },
             "require-dev": {
-                "connectholland/mongo-aggregations": "@RC",
                 "mockery/mockery": "^0.9.4",
                 "phpunit/phpunit": "^4.7"
             },
             "suggest": {
-                "connectholland/mongo-aggregations": "Use aggregations for mongo filtering (not compatible with mongo 2.2)",
                 "connectholland/windmill-eventdispatcher-addon": "Makes a symfony based EventDispatcher available",
+                "connectholland/windmill-mongo-aggregations-addon": "Addon that uses aggregations for mongo filtering (not compatible with mongo 2.2)",
                 "connectholland/windmill-monolog-addon": "Makes a PSR-3 logger available",
                 "raven/raven": "Gives possibility to log to a centralized Sentry server (tested version 0.7.1)"
             },
@@ -1122,7 +1121,7 @@
             "support": {
                 "source": "https://github.com/RonRademaker/Windmill/tree/aggregations-filter-count"
             },
-            "time": "2015-11-05 14:10:05"
+            "time": "2015-11-09 12:58:01"
         },
         {
             "name": "connectholland/windmill-bootstrap",

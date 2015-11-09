@@ -9,6 +9,17 @@
             "email": "ron@connectholland.nl"
         }
     ],
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/",
+            "vendor/connectholland/windmill/tests"
+        ]
+    },
     "require": {
         "connectholland/mongo-aggregations": "@RC"
     },
