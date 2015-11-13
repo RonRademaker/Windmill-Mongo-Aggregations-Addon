@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8b30812991e56e979ef3319635248fc9",
-    "content-hash": "7329f93c51c711f7bc31d54373c074bf",
+    "hash": "bbd7d3dbdfa35c48b2a93657992a9486",
+    "content-hash": "500dbf98c159e40871195b191530daa2",
     "packages": [
         {
             "name": "connectholland/mongo-aggregations",
@@ -42,6 +42,172 @@
             ],
             "description": "Library allowing easy access to the mongo aggregate framework",
             "time": "2015-11-05 16:13:51"
+        },
+        {
+            "name": "connectholland/propel1",
+            "version": "1.6.7",
+            "source": {
+                "type": "svn",
+                "url": "svn+ssh://svn.repositories.connectholland.nl/srv/svn/main/propel",
+                "reference": "/online/1.6.7/@116821"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "https://composer.packages.connectholland.nl/dist/connectholland-propel1-1.6.7-596c52.tar",
+                "reference": "/online/1.6.7/@116821",
+                "shasum": "d63d8436484331a1c6ec9994342d344b12b15bd8"
+            },
+            "require": {
+                "pear-pear.php.net/log": "1.12.8",
+                "phing/phing": ">=2.4.12,2.4.*",
+                "php": ">=5.2.4"
+            },
+            "bin": [
+                "generator/bin/propel-gen",
+                "generator/bin/propel-gen.bat"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "runtime/lib",
+                    "generator/lib"
+                ]
+            },
+            "include-path": [
+                "runtime/lib",
+                "generator/lib"
+            ],
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William Durand",
+                    "email": "william.durand1@gmail.com",
+                    "homepage": "http://www.willdurand.fr"
+                }
+            ],
+            "description": "Propel is an open-source Object-Relational Mapping (ORM) for PHP5.",
+            "homepage": "http://www.propelorm.org/",
+            "keywords": [
+                "active record",
+                "database",
+                "mapping",
+                "orm",
+                "persistence"
+            ],
+            "time": "2015-08-10 16:37:49"
+        },
+        {
+            "name": "connectholland/windmill",
+            "version": "6.6.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:ConnectHolland/Windmill.git",
+                "reference": "b8df1ef22bf0b6a1df94da8f7d59aa6d5996cde9"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "https://composer.packages.connectholland.nl/dist/connectholland-windmill-b8df1ef22bf0b6a1df94da8f7d59aa6d5996cde9-zip-f2fc10.tar",
+                "reference": "b8df1ef22bf0b6a1df94da8f7d59aa6d5996cde9",
+                "shasum": "59f27701129b171d63fbe33627fccdaaedc1020c"
+            },
+            "require": {
+                "connectholland/propel1": "1.6.7",
+                "connectholland/windmill-bootstrap": "^1.3.3",
+                "ext-curl": "*",
+                "ext-gd": "*",
+                "ext-ldap": "*",
+                "ext-mongo": "*",
+                "ext-pdo_mysql": "*",
+                "ext-tidy": "*",
+                "ext-xml": "*",
+                "ext-xsl": "*",
+                "lib-xsl": "*",
+                "php": ">=5.3.3",
+                "phpoffice/phpexcel": "^1.8",
+                "symfony/config": "^2.7",
+                "symfony/dependency-injection": "^2.7",
+                "symfony/http-foundation": "^2.7",
+                "zf1/zend-search-lucene": "^1.12"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7"
+            },
+            "suggest": {
+                "connectholland/windmill-eventdispatcher-addon": "Makes a symfony based EventDispatcher available",
+                "connectholland/windmill-mongo-aggregations-addon": "Addon that uses aggregations for mongo filtering (not compatible with mongo 2.2)",
+                "connectholland/windmill-monolog-addon": "Makes a PSR-3 logger available",
+                "raven/raven": "Gives possibility to log to a centralized Sentry server (tested version 0.7.1)"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/Forms/",
+                    "src/Framework/",
+                    "src/Modules/",
+                    "src/Support/"
+                ],
+                "files": [
+                    "src/Plugins/aeroplane/Framework/Aeroplane.php"
+                ]
+            },
+            "autoload-dev": {
+                "classmap": [
+                    "tests/"
+                ]
+            },
+            "license": [
+                "GPL-3.0"
+            ],
+            "description": "Windmill Framework",
+            "homepage": "http://www.connectholland.nl/",
+            "time": "2015-11-12 10:01:02"
+        },
+        {
+            "name": "connectholland/windmill-bootstrap",
+            "version": "1.3.5",
+            "source": {
+                "type": "svn",
+                "url": "svn+ssh://svn.repositories.connectholland.nl/srv/svn/main/wmbootstrap",
+                "reference": "/online/1.3.5/@120277"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "https://composer.packages.connectholland.nl/dist/connectholland-windmill-bootstrap-1.3.5-e7de06.tar",
+                "reference": "/online/1.3.5/@120277",
+                "shasum": "6808c0ea2cf7386ed210999b9ee7a91fb6f253cc"
+            },
+            "require": {
+                "ext-xml": "*",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "WMBootstrap.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Niels Nijens",
+                    "email": "niels@connectholland.nl",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Giso Stallenberg",
+                    "email": "giso@connectholland.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Windmill Bootstrap",
+            "time": "2015-10-09 14:48:22"
         },
         {
             "name": "doctrine/instantiator",
@@ -98,6 +264,88 @@
             "time": "2015-06-14 21:17:01"
         },
         {
+            "name": "pear-pear.php.net/Log",
+            "version": "1.12.8",
+            "dist": {
+                "type": "file",
+                "url": "https://composer.packages.connectholland.nl/dist/pear-pear-php-net-log-1.12.8.tgz",
+                "reference": null,
+                "shasum": "3893ec65354dc2bd7fa344079d6b096e07e356a2"
+            },
+            "require": {
+                "php": ">=5.0.0.0"
+            },
+            "replace": {
+                "pear-pear/log": "== 1.12.8.0"
+            },
+            "type": "pear-library",
+            "autoload": {
+                "classmap": [
+                    ""
+                ]
+            },
+            "include-path": [
+                "/"
+            ],
+            "license": [
+                "MIT License"
+            ],
+            "description": "The Log package provides an abstracted logging framework.  It includes output handlers for log files, databases, syslog, email, Firebug, and the console.  It also provides composite and subject-observer logging mechanisms."
+        },
+        {
+            "name": "phing/phing",
+            "version": "2.4.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phingofficial/phing.git",
+                "reference": "41075d93ca254f1c90c79ec7ce81be2b2629e138"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phingofficial/phing/zipball/41075d93ca254f1c90c79ec7ce81be2b2629e138",
+                "reference": "41075d93ca254f1c90c79ec7ce81be2b2629e138",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "bin": [
+                "bin/phing"
+            ],
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "classes/phing/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "classes"
+            ],
+            "license": [
+                "LGPL3"
+            ],
+            "authors": [
+                {
+                    "name": "Michiel Rook",
+                    "email": "mrook@php.net",
+                    "role": "Lead"
+                },
+                {
+                    "name": "Phing Community",
+                    "homepage": "http://www.phing.info/trac/wiki/Development/Contributors"
+                }
+            ],
+            "description": "PHing Is Not GNU make; it's a PHP project build system or build tool based on Apache Ant.",
+            "homepage": "http://www.phing.info/",
+            "keywords": [
+                "build",
+                "task",
+                "tool"
+            ],
+            "time": "2012-11-29 21:23:47"
+        },
+        {
             "name": "phpdocumentor/reflection-docblock",
             "version": "2.0.4",
             "source": {
@@ -145,6 +393,63 @@
                 }
             ],
             "time": "2015-02-03 12:10:50"
+        },
+        {
+            "name": "phpoffice/phpexcel",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPOffice/PHPExcel.git",
+                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
+                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xml": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PHPExcel": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Maarten Balliauw",
+                    "homepage": "http://blog.maartenballiauw.be"
+                },
+                {
+                    "name": "Mark Baker"
+                },
+                {
+                    "name": "Franck Lefevre",
+                    "homepage": "http://blog.rootslabs.net"
+                },
+                {
+                    "name": "Erik Tilt"
+                }
+            ],
+            "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
+            "homepage": "http://phpexcel.codeplex.com",
+            "keywords": [
+                "OpenXML",
+                "excel",
+                "php",
+                "spreadsheet",
+                "xls",
+                "xlsx"
+            ],
+            "time": "2015-05-01 07:00:55"
         },
         {
             "name": "phpspec/prophecy",
@@ -448,16 +753,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.16",
+            "version": "4.8.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "625f8c345606ed0f3a141dfb88f4116f0e22978e"
+                "reference": "fa33d4ad96481b91df343d83e8c8aabed6b1dfd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/625f8c345606ed0f3a141dfb88f4116f0e22978e",
-                "reference": "625f8c345606ed0f3a141dfb88f4116f0e22978e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fa33d4ad96481b91df343d83e8c8aabed6b1dfd3",
+                "reference": "fa33d4ad96481b91df343d83e8c8aabed6b1dfd3",
                 "shasum": ""
             },
             "require": {
@@ -516,7 +821,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-23 06:48:33"
+            "time": "2015-11-11 11:32:49"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -946,362 +1251,6 @@
             "time": "2015-06-21 13:59:46"
         },
         {
-            "name": "symfony/yaml",
-            "version": "v2.7.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "eca9019c88fbe250164affd107bc8057771f3f4d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/eca9019c88fbe250164affd107bc8057771f3f4d",
-                "reference": "eca9019c88fbe250164affd107bc8057771f3f4d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Yaml\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Yaml Component",
-            "homepage": "https://symfony.com",
-            "time": "2015-10-11 09:39:48"
-        }
-    ],
-    "packages-dev": [
-        {
-            "name": "connectholland/propel1",
-            "version": "1.6.7",
-            "source": {
-                "type": "svn",
-                "url": "svn+ssh://svn.repositories.connectholland.nl/srv/svn/main/propel",
-                "reference": "/online/1.6.7/@116821"
-            },
-            "dist": {
-                "type": "tar",
-                "url": "https://composer.packages.connectholland.nl/dist/connectholland-propel1-1.6.7-596c52.tar",
-                "reference": "/online/1.6.7/@116821",
-                "shasum": "d63d8436484331a1c6ec9994342d344b12b15bd8"
-            },
-            "require": {
-                "pear-pear.php.net/log": "1.12.8",
-                "phing/phing": ">=2.4.12,2.4.*",
-                "php": ">=5.2.4"
-            },
-            "bin": [
-                "generator/bin/propel-gen",
-                "generator/bin/propel-gen.bat"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.6-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "runtime/lib",
-                    "generator/lib"
-                ]
-            },
-            "include-path": [
-                "runtime/lib",
-                "generator/lib"
-            ],
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "William Durand",
-                    "email": "william.durand1@gmail.com",
-                    "homepage": "http://www.willdurand.fr"
-                }
-            ],
-            "description": "Propel is an open-source Object-Relational Mapping (ORM) for PHP5.",
-            "homepage": "http://www.propelorm.org/",
-            "keywords": [
-                "active record",
-                "database",
-                "mapping",
-                "orm",
-                "persistence"
-            ],
-            "time": "2015-08-10 16:37:49"
-        },
-        {
-            "name": "connectholland/windmill",
-            "version": "dev-aggregations-filter-count",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:RonRademaker/Windmill.git",
-                "reference": "604895fb8791d4604b7a086e7f9a4c902815bf61"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RonRademaker/Windmill/zipball/604895fb8791d4604b7a086e7f9a4c902815bf61",
-                "reference": "604895fb8791d4604b7a086e7f9a4c902815bf61",
-                "shasum": ""
-            },
-            "require": {
-                "connectholland/propel1": "1.6.7",
-                "connectholland/windmill-bootstrap": "^1.3.3",
-                "ext-curl": "*",
-                "ext-gd": "*",
-                "ext-ldap": "*",
-                "ext-mongo": "*",
-                "ext-pdo_mysql": "*",
-                "ext-tidy": "*",
-                "ext-xml": "*",
-                "ext-xsl": "*",
-                "lib-xsl": "*",
-                "php": ">=5.3.3",
-                "phpoffice/phpexcel": "^1.8",
-                "symfony/config": "^2.7",
-                "symfony/dependency-injection": "^2.7",
-                "symfony/http-foundation": "^2.7",
-                "zf1/zend-search-lucene": "^1.12"
-            },
-            "require-dev": {
-                "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7"
-            },
-            "suggest": {
-                "connectholland/windmill-eventdispatcher-addon": "Makes a symfony based EventDispatcher available",
-                "connectholland/windmill-mongo-aggregations-addon": "Addon that uses aggregations for mongo filtering (not compatible with mongo 2.2)",
-                "connectholland/windmill-monolog-addon": "Makes a PSR-3 logger available",
-                "raven/raven": "Gives possibility to log to a centralized Sentry server (tested version 0.7.1)"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/Forms/",
-                    "src/Framework/",
-                    "src/Modules/",
-                    "src/Support/"
-                ],
-                "files": [
-                    "src/Plugins/aeroplane/Framework/Aeroplane.php"
-                ]
-            },
-            "autoload-dev": {
-                "classmap": [
-                    "tests/"
-                ]
-            },
-            "license": [
-                "GPL-3.0"
-            ],
-            "description": "Windmill Framework",
-            "homepage": "http://www.connectholland.nl/",
-            "support": {
-                "source": "https://github.com/RonRademaker/Windmill/tree/aggregations-filter-count"
-            },
-            "time": "2015-11-09 12:58:01"
-        },
-        {
-            "name": "connectholland/windmill-bootstrap",
-            "version": "1.3.5",
-            "source": {
-                "type": "svn",
-                "url": "svn+ssh://svn.repositories.connectholland.nl/srv/svn/main/wmbootstrap",
-                "reference": "/online/1.3.5/@120277"
-            },
-            "dist": {
-                "type": "tar",
-                "url": "https://composer.packages.connectholland.nl/dist/connectholland-windmill-bootstrap-1.3.5-e7de06.tar",
-                "reference": "/online/1.3.5/@120277",
-                "shasum": "6808c0ea2cf7386ed210999b9ee7a91fb6f253cc"
-            },
-            "require": {
-                "ext-xml": "*",
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "WMBootstrap.php"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "Niels Nijens",
-                    "email": "niels@connectholland.nl",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Giso Stallenberg",
-                    "email": "giso@connectholland.nl",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Windmill Bootstrap",
-            "time": "2015-10-09 14:48:22"
-        },
-        {
-            "name": "pear-pear.php.net/Log",
-            "version": "1.12.8",
-            "dist": {
-                "type": "file",
-                "url": "https://composer.packages.connectholland.nl/dist/pear-pear-php-net-log-1.12.8.tgz",
-                "reference": null,
-                "shasum": "3893ec65354dc2bd7fa344079d6b096e07e356a2"
-            },
-            "require": {
-                "php": ">=5.0.0.0"
-            },
-            "replace": {
-                "pear-pear/log": "== 1.12.8.0"
-            },
-            "type": "pear-library",
-            "autoload": {
-                "classmap": [
-                    ""
-                ]
-            },
-            "include-path": [
-                "/"
-            ],
-            "license": [
-                "MIT License"
-            ],
-            "description": "The Log package provides an abstracted logging framework.  It includes output handlers for log files, databases, syslog, email, Firebug, and the console.  It also provides composite and subject-observer logging mechanisms."
-        },
-        {
-            "name": "phing/phing",
-            "version": "2.4.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phingofficial/phing.git",
-                "reference": "41075d93ca254f1c90c79ec7ce81be2b2629e138"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phingofficial/phing/zipball/41075d93ca254f1c90c79ec7ce81be2b2629e138",
-                "reference": "41075d93ca254f1c90c79ec7ce81be2b2629e138",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
-            },
-            "bin": [
-                "bin/phing"
-            ],
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "classes/phing/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                "classes"
-            ],
-            "license": [
-                "LGPL3"
-            ],
-            "authors": [
-                {
-                    "name": "Michiel Rook",
-                    "email": "mrook@php.net",
-                    "role": "Lead"
-                },
-                {
-                    "name": "Phing Community",
-                    "homepage": "http://www.phing.info/trac/wiki/Development/Contributors"
-                }
-            ],
-            "description": "PHing Is Not GNU make; it's a PHP project build system or build tool based on Apache Ant.",
-            "homepage": "http://www.phing.info/",
-            "keywords": [
-                "build",
-                "task",
-                "tool"
-            ],
-            "time": "2012-11-29 21:23:47"
-        },
-        {
-            "name": "phpoffice/phpexcel",
-            "version": "1.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHPOffice/PHPExcel.git",
-                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
-                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
-                "shasum": ""
-            },
-            "require": {
-                "ext-xml": "*",
-                "ext-xmlwriter": "*",
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "PHPExcel": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL"
-            ],
-            "authors": [
-                {
-                    "name": "Maarten Balliauw",
-                    "homepage": "http://blog.maartenballiauw.be"
-                },
-                {
-                    "name": "Mark Baker"
-                },
-                {
-                    "name": "Franck Lefevre",
-                    "homepage": "http://blog.rootslabs.net"
-                },
-                {
-                    "name": "Erik Tilt"
-                }
-            ],
-            "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
-            "homepage": "http://phpexcel.codeplex.com",
-            "keywords": [
-                "OpenXML",
-                "excel",
-                "php",
-                "spreadsheet",
-                "xls",
-                "xlsx"
-            ],
-            "time": "2015-05-01 07:00:55"
-        },
-        {
             "name": "symfony/config",
             "version": "v2.7.6",
             "source": {
@@ -1506,6 +1455,52 @@
             "time": "2015-10-23 14:47:27"
         },
         {
+            "name": "symfony/yaml",
+            "version": "v2.7.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "eca9019c88fbe250164affd107bc8057771f3f4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/eca9019c88fbe250164affd107bc8057771f3f4d",
+                "reference": "eca9019c88fbe250164affd107bc8057771f3f4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-10-11 09:39:48"
+        },
+        {
             "name": "zf1/zend-exception",
             "version": "1.12.11",
             "source": {
@@ -1660,18 +1655,11 @@
             "time": "2015-04-30 11:12:33"
         }
     ],
-    "aliases": [
-        {
-            "alias": "6.6.0",
-            "alias_normalized": "6.6.0.0",
-            "version": "dev-aggregations-filter-count",
-            "package": "connectholland/windmill"
-        }
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "connectholland/mongo-aggregations": 5,
-        "connectholland/windmill": 20
+        "connectholland/mongo-aggregations": 5
     },
     "prefer-stable": false,
     "prefer-lowest": false,

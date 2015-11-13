@@ -21,17 +21,13 @@
         ]
     },
     "require": {
-        "connectholland/mongo-aggregations": "@RC"
+        "connectholland/mongo-aggregations": "@RC",
+        "connectholland/windmill": "^6.6"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.7",
-        "connectholland/windmill": "dev-aggregations-filter-count as 6.6.0"
+        "phpunit/phpunit": "^4.7"
     },
     "repositories": {
-        "ron": {
-            "type": "vcs",
-            "url": "https://github.com/RonRademaker/Windmill.git"
-        },
         "connectholland": {
             "type": "composer",
             "url": "https://composer.packages.connectholland.nl/"
