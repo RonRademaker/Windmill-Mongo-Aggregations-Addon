@@ -138,29 +138,60 @@ class MongoAggregation
     private function getAggregationMatchQuery(MongoCriteria $mc, MongoDB $db, MongoCollection $collection)
     {
         $clonedMongoCriteria = clone $mc;
-
         $condition = $clonedMongoCriteria->getSelectQuery();
 
-        foreach ($condition as $conditionkey => $conditionpart) {
-            if (is_array($conditionpart)
-                && (array_key_exists("\$near", $conditionpart) || array_key_exists("\$within", $conditionpart))) {
-                $idsMongoCriteria = clone $clonedMongoCriteria;
-                $idsMongoCriteria->setLimit(0);
-                $idsMongoCriteria->addSelectColumn("_id");
-                $resultCursor = MongoPeer::doSelectStmt($idsMongoCriteria, $db, $collection->getName());
-                $ids = array();
-                while ($resultCursor->hasNext()) {
-                    $item = $resultCursor->getNext();
-                    if (array_key_exists("_id", $item)) {
-                        $ids[] = $item["_id"];
-                    }
+        if ($this->isValidMatchQuery($condition)) {
+            return $condition;
+        } else {
+            return $this->createIdQuery($clonedMongoCriteria, $db, $collection);
+        }
+    }
+
+    /**
+     * Checks if $query in valid for use in $match
+     *
+     * @param array $query
+     * @return boolean
+     */
+    private function isValidMatchQuery(array $condition)
+    {
+        $invalid = ['$near', '$within', '$where'];
+        $valid = true;
+
+        foreach ($condition as $part) {
+            if (is_array($part)) {
+                $valid = $valid && $this->isValidMatchQuery($part);
+                foreach ($invalid as $test) {
+                    $valid = $valid && !array_key_exists($test, $part);
                 }
-                unset($condition[$conditionkey]); // $near not supported in aggregations
-                $condition["_id"] = array("\$in" => $ids);
             }
         }
 
-        return $condition;
+        return $valid;
+    }
+
+    /**
+     * Creates a search by _id query
+     * Fallback for queries with $near, $where etc. which are not allowed in aggregation $match
+     *
+     * @param MongoCriteria $mc
+     * @return array
+     */
+    private function createIdQuery(MongoCriteria $mc, MongoDB $db, MongoCollection $collection)
+    {
+        $idsMongoCriteria = clone $mc;
+        $idsMongoCriteria->setLimit(0);
+        $idsMongoCriteria->addSelectColumn("_id");
+        $resultCursor = MongoPeer::doSelectStmt($idsMongoCriteria, $db, $collection->getName());
+        $ids = array();
+        while ($resultCursor->hasNext()) {
+            $item = $resultCursor->getNext();
+            if (array_key_exists("_id", $item)) {
+                $ids[] = $item["_id"];
+            }
+        }
+
+        return ["_id" => ["\$in" => $ids]];
     }
 
     /**
