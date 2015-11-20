@@ -21,7 +21,7 @@
         ]
     },
     "require": {
-        "connectholland/mongo-aggregations": "@RC",
+        "connectholland/mongo-aggregations": "^1.0",
         "connectholland/windmill": "^6.6"
     },
     "require-dev": {
