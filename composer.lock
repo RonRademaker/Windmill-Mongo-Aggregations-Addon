@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bbd7d3dbdfa35c48b2a93657992a9486",
-    "content-hash": "500dbf98c159e40871195b191530daa2",
+    "hash": "bebb2037d4007d4d08ee4216b5a7b875",
+    "content-hash": "ccd46d65fad59f2d40df26938d732143",
     "packages": [
         {
             "name": "connectholland/mongo-aggregations",
-            "version": "0.1.0-RC2",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ConnectHolland/MongoAggregations.git",
-                "reference": "c829d42faf6c4d2594dadfbafa0626c261315009"
+                "reference": "79c2a9a8b37c9d25817945ade58c26c6022d2acb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ConnectHolland/MongoAggregations/zipball/c829d42faf6c4d2594dadfbafa0626c261315009",
-                "reference": "c829d42faf6c4d2594dadfbafa0626c261315009",
+                "url": "https://api.github.com/repos/ConnectHolland/MongoAggregations/zipball/79c2a9a8b37c9d25817945ade58c26c6022d2acb",
+                "reference": "79c2a9a8b37c9d25817945ade58c26c6022d2acb",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "Library allowing easy access to the mongo aggregate framework",
-            "time": "2015-11-05 16:13:51"
+            "time": "2015-11-20 13:07:12"
         },
         {
             "name": "connectholland/propel1",
@@ -1658,9 +1658,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "connectholland/mongo-aggregations": 5
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
